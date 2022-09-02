@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1SyntaxCSharp", "1SyntaxCSharp\1SyntaxCSharp.csproj", "{EE0832A7-EB51-4EB0-A85E-90B55882B62B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEingabeAusgabe", "ConsoleEingabeAusgabe\ConsoleEingabeAusgabe.csproj", "{6D80AA07-F516-4EAA-BF96-2491C0EDFA98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleEingabeAusgabe", "ConsoleEingabeAusgabe\ConsoleEingabeAusgabe.csproj", "{6D80AA07-F516-4EAA-BF96-2491C0EDFA98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3Datentypkonvertierung", "3Datentypkonvertierung\3Datentypkonvertierung.csproj", "{E6A6E114-FA8D-4370-88AB-A8388DC43E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6D80AA07-F516-4EAA-BF96-2491C0EDFA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D80AA07-F516-4EAA-BF96-2491C0EDFA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D80AA07-F516-4EAA-BF96-2491C0EDFA98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A6E114-FA8D-4370-88AB-A8388DC43E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A6E114-FA8D-4370-88AB-A8388DC43E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A6E114-FA8D-4370-88AB-A8388DC43E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A6E114-FA8D-4370-88AB-A8388DC43E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
