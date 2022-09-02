@@ -4,6 +4,11 @@ Console.WriteLine("(o o)");
 Console.WriteLine("| O |");
 Console.WriteLine("|   |");
 Console.WriteLine("'~~~'");
+Console.WriteLine("      ");
+Console.WriteLine("      ");
+Console.WriteLine("      ");
+Console.WriteLine("      ");
+
 
 //Aufgabe2
 string Vorname;
@@ -14,14 +19,21 @@ Vorname = "Arthur";
 Nachname = "Dyga";
 Alter = 15;
 
+
 Console.WriteLine($"{Vorname}");
 Console.WriteLine($"{Nachname}");
 Console.WriteLine($"{Alter}");
+Console.WriteLine("      ");
+Console.WriteLine("      ");
+Console.WriteLine("      ");
+Console.WriteLine("      ");
+
 
 //Aufgabe3
 string Vorname1;
 string Alter1;
 string Klasse1;
+string test;
 
 
 Console.WriteLine("Name?");
