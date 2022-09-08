@@ -1,10 +1,16 @@
 ﻿//Arbeitsauftrag 1
-Console.WriteLine($"Short: {typeof(short)} hat {sizeof(short)} Bytes / MinValue: {short.MinValue} / MaxValue: {short.MaxValue}");
-Console.WriteLine($"int: {typeof(int)} hat {sizeof(int)} Bytes / {int.MinValue} / MaxValue: {int.MaxValue}");
-Console.WriteLine($"long: {typeof(long)} hat {sizeof(long)} Bytes / MinValue: {long.MinValue} / MaxValue: {long.MaxValue}");
-Console.WriteLine($"float: {typeof(float)} hat {sizeof(float)} Bytes / MinValue: {float.MinValue} / MaxValue: {float.MaxValue}");
-Console.WriteLine($"double: {typeof(double)} hat {sizeof(double)} Bytes / MinValue: {double.MinValue} / MaxValue: {double.MaxValue}");
-Console.WriteLine($"decimal: {typeof(decimal)} hat {sizeof(decimal)} Bytes / MinValue: {decimal.MinValue} / MaxValue: {decimal.MaxValue}");
+int Short = 2 * 8; //bytes x 8
+int Integer = 4 * 8;
+int Long = 8 * 8;
+int Float = 4 * 8;
+int Double = 8 * 8;
+int Decimal = 16 * 8;
+Console.WriteLine($"Short:{Short} Bits / {typeof(short)} hat {sizeof(short)} Bytes / MinValue: {short.MinValue} / MaxValue: {short.MaxValue}");
+Console.WriteLine($"int:{Integer} Bits {typeof(int)} hat {sizeof(int)} Bytes / MinValue: {int.MinValue} / MaxValue: {int.MaxValue}");
+Console.WriteLine($"long:{Long} Bits {typeof(long)} hat {sizeof(long)} Bytes / MinValue: {long.MinValue} / MaxValue: {long.MaxValue}");
+Console.WriteLine($"float:{Float} Bits {typeof(float)} hat {sizeof(float)} Bytes / MinValue: {float.MinValue} / MaxValue: {float.MaxValue}");
+Console.WriteLine($"double:{Double} Bits {typeof(double)} hat {sizeof(double)} Bytes / MinValue: {double.MinValue} / MaxValue: {double.MaxValue}");
+Console.WriteLine($"decimal:{Decimal} Bits {typeof(decimal)} hat {sizeof(decimal)} Bytes / MinValue: {decimal.MinValue} / MaxValue: {decimal.MaxValue}");
 Console.WriteLine(" ");
 Console.WriteLine(" ");
 Console.WriteLine(" ");
@@ -12,7 +18,7 @@ Console.WriteLine(" ");
 
 //Arbeitsauuftrag 2
 string Vorname = "Arthur";
-int Alter = 15;
+short Alter = 15;
 bool Ist_CSharp_Die_Erste_Programmiersprache_Die_sie_Lernen = true;
 Console.WriteLine($"Vorname: {Vorname}");
 Console.WriteLine($"Alter: {Alter}");
