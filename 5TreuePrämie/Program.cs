@@ -18,7 +18,3 @@ if (Jahre > 10)
     Prämie = ((Jahre - 10) * 10)+150;
     Console.WriteLine($"Ihre Prämie liegt bei {Prämie:C2} im Jahr");
 }
-else
-{
-
-}

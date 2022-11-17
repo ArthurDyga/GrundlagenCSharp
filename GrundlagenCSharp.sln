@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3Datentypkonvertierung", "3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2ConsolenEingbaeAusgabe", "2ConsolenEingbaeAusgabe\2ConsolenEingbaeAusgabe.csproj", "{C46D499A-20B9-4F3A-B6DB-CC08224A766B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4BMI", "4BMI\4BMI.csproj", "{C5E471A0-AABD-4C7C-B98F-ED9AE99CA9A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4BMI", "4BMI\4BMI.csproj", "{C5E471A0-AABD-4C7C-B98F-ED9AE99CA9A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5TreuePrämie", "5TreuePrämie\5TreuePrämie.csproj", "{3469D23E-FCA9-4B20-BC91-6462DF9E03C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5TreuePrämie", "5TreuePrämie\5TreuePrämie.csproj", "{3469D23E-FCA9-4B20-BC91-6462DF9E03C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6Sinus", "6Sinus\6Sinus.csproj", "{24B19179-F743-4474-A5D4-B08D9A7AA5FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3469D23E-FCA9-4B20-BC91-6462DF9E03C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3469D23E-FCA9-4B20-BC91-6462DF9E03C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3469D23E-FCA9-4B20-BC91-6462DF9E03C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B19179-F743-4474-A5D4-B08D9A7AA5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B19179-F743-4474-A5D4-B08D9A7AA5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B19179-F743-4474-A5D4-B08D9A7AA5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B19179-F743-4474-A5D4-B08D9A7AA5FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
