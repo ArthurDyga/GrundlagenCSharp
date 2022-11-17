@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1SyntaxCSharp", "1SyntaxCSh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3Datentypkonvertierung", "3Datentypkonvertierung\3Datentypkonvertierung.csproj", "{E6A6E114-FA8D-4370-88AB-A8388DC43E34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2ConsolenEingbaeAusgabe", "2ConsolenEingbaeAusgabe\2ConsolenEingbaeAusgabe.csproj", "{C46D499A-20B9-4F3A-B6DB-CC08224A766B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2ConsolenEingbaeAusgabe", "2ConsolenEingbaeAusgabe\2ConsolenEingbaeAusgabe.csproj", "{C46D499A-20B9-4F3A-B6DB-CC08224A766B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4BMI", "4BMI\4BMI.csproj", "{C5E471A0-AABD-4C7C-B98F-ED9AE99CA9A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C46D499A-20B9-4F3A-B6DB-CC08224A766B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C46D499A-20B9-4F3A-B6DB-CC08224A766B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C46D499A-20B9-4F3A-B6DB-CC08224A766B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E471A0-AABD-4C7C-B98F-ED9AE99CA9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E471A0-AABD-4C7C-B98F-ED9AE99CA9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E471A0-AABD-4C7C-B98F-ED9AE99CA9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E471A0-AABD-4C7C-B98F-ED9AE99CA9A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
