@@ -1,4 +1,5 @@
-﻿Console.WriteLine("1 Cosinus");
+﻿Console.WriteLine("Rechner");
+Console.WriteLine("1 Cosinus");
 Console.WriteLine("2 Sinus");
 Console.WriteLine("3 Tangens");
 Console.WriteLine("Geben sie eine zahl von 1-3 ein.");

@@ -1,4 +1,5 @@
-﻿double Gewicht;
+﻿Console.WriteLine("BMI rechner");
+double Gewicht;
 double größe;
 double BMI;
 

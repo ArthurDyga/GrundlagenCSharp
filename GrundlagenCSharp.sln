@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4BMI", "4BMI\4BMI.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5TreuePrämie", "5TreuePrämie\5TreuePrämie.csproj", "{3469D23E-FCA9-4B20-BC91-6462DF9E03C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6Sinus", "6Sinus\6Sinus.csproj", "{24B19179-F743-4474-A5D4-B08D9A7AA5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6Sinus", "6Sinus\6Sinus.csproj", "{24B19179-F743-4474-A5D4-B08D9A7AA5FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7WochenTage", "7WochenTage\7WochenTage.csproj", "{0822DDD4-92F9-4FB0-A595-B18F1DCCA99F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{24B19179-F743-4474-A5D4-B08D9A7AA5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24B19179-F743-4474-A5D4-B08D9A7AA5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24B19179-F743-4474-A5D4-B08D9A7AA5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0822DDD4-92F9-4FB0-A595-B18F1DCCA99F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0822DDD4-92F9-4FB0-A595-B18F1DCCA99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0822DDD4-92F9-4FB0-A595-B18F1DCCA99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0822DDD4-92F9-4FB0-A595-B18F1DCCA99F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

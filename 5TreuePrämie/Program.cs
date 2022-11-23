@@ -1,4 +1,5 @@
-﻿double Prämie;
+﻿Console.WriteLine("Prämien Rechner");
+double Prämie;
 Console.WriteLine("Seit wielange arbeiten sie schon?(In jahre)");
 double Jahre = Convert.ToDouble(Console.ReadLine());
 if (Jahre < 10)
