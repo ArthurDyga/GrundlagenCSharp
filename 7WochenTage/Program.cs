@@ -50,7 +50,7 @@ switch (h)
         Ergebniss = "Freitag";
         break;
     case 7:
-        Ergebniss = "Samsatag";
+        Ergebniss = "Samstag";
         break;
 }
 Console.WriteLine($"Der wochentag lautet: {Ergebniss}");

@@ -2,20 +2,33 @@
 double Prämie;
 Console.WriteLine("Seit wielange arbeiten sie schon?(In jahre)");
 double Jahre = Convert.ToDouble(Console.ReadLine());
+double Prmie;
 if (Jahre < 10)
 {
     switch (Jahre)
     {
         case < 3:
-            Console.WriteLine($"Keine Prämie");
+            Prmie = 0;
+            Console.WriteLine($"Prämie = {Prmie:C2} Euro pro Jahr");
             break;
         case >= 3:
-            Console.WriteLine($"Prämie = 150 Euro pro Jahr");
+            Prmie = 150;
+            Prmie = 150 * (Jahre-2);
+            Console.WriteLine($"Prämie = {Prmie:C2} Euro pro Jahr");
             break;
     }
 }
-if (Jahre > 10)
+double Zähler = Jahre - 9;
+double Prm = 150;
+if (Jahre >= 10)
 {
-    Prämie = ((Jahre - 10) * 10)+150;
+    Prämie = 1050;
+    while (Zähler > 0)
+    {
+        Prm += 10;
+        Prämie += Prm;
+        --Zähler;
+
+    }
     Console.WriteLine($"Ihre Prämie liegt bei {Prämie:C2} im Jahr");
 }
