@@ -15,24 +15,65 @@ double Endpreis = 0;
 double Endpreis_Kinder = 0;
 double ERGEB_NIS = 0;
 Console.OutputEncoding = System.Text.Encoding.Unicode;
+string Hotel_Rechner1 = "============================================================", Hotel_Rechner2 = "                    Hotel rechner", Hotel_Rechner3 = "============================================================";
 
-Console.WriteLine("Hotel rechner");
+// 1
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
 Console.WriteLine();
-Console.WriteLine("Geben sie die Aufenthaltsdauer an:");
+Console.WriteLine("Geben sie die Aufenthaltsdauer an (in tage):");
 Aufenthaltsdauer = Convert.ToDouble(Console.ReadLine());
+Console.Clear();
+
+// 2
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
 Console.WriteLine("Geben sie die Anzahl der personen an:");
 anzahl_der_personen = Convert.ToDouble(Console.ReadLine());
+Console.Clear();
+
+//3
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
 Console.WriteLine("Geben sie die saison an:");
-Console.WriteLine("Frühling = 1");
-Console.WriteLine("Sommer = 2");
-Console.WriteLine("Herbst = 3");
-Console.WriteLine("Winter = 4)");
+Console.WriteLine("Frühling        = 1");
+Console.WriteLine("Sommer   (+15%) = 2");
+Console.WriteLine("Herbst          = 3");
+Console.WriteLine("Winter   (-15%) = 4)");
 saison = Convert.ToDouble(Console.ReadLine());
+Console.Clear();
+switch (saison)
+{
+    case 1:
+        saison = 1;
+        break;
+    case 2:
+        saison = 1.15;
+        break;
+    case 3:
+        saison = 1;
+        break;
+    case 4:
+        saison = 0.85;
+        break;
+}
+
+// 4
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
 Console.WriteLine("Geben sie die Zimmerkategorie an:");
-Console.WriteLine("Standard = 1");
-Console.WriteLine("Komfort = 2");
-Console.WriteLine("Suit = 3");
+Console.WriteLine("Standard (70€ pro Nacht) = 1");
+Console.WriteLine("Komfort (100€ pro Nacht) = 2");
+Console.WriteLine("Suit    (250€ pro Nacht) = 3");
 Zimmerkategorie = Convert.ToDouble(Console.ReadLine());
+Console.Clear();
 switch (Zimmerkategorie)
 {
     case 1:
@@ -45,34 +86,53 @@ switch (Zimmerkategorie)
         Zimmerpreis = 250;
         break;
 }
+
+// 5
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
 Console.WriteLine("Geben sie die Kundenkategorie an:");
-Console.WriteLine("Stammkunde = 1");
-Console.WriteLine("Firmenkunde = 2");
-Console.WriteLine("Reisebüro = 3");
+Console.WriteLine("Stammkunde   (20%) = 1");
+Console.WriteLine("Firmenkunde  (15%) = 2");
+Console.WriteLine("Reisebüro          = 3");
 Kundenkategorie = Convert.ToDouble(Console.ReadLine());
+Console.Clear();
 switch (Kundenkategorie)
 {
     case 1:
-        Kundenrabatt = 20;
+        Kundenrabatt = 0.8;
         break;
     case 2:
-        Kundenrabatt = 15;
+        Kundenrabatt = 0.85;
         break;
     case 3:
-        Kundenrabatt = 10;
+        Kundenrabatt = 1;
         break;
 }
+
+// 6
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
 Console.WriteLine("Geben sie die anzahl der Kinder an:");
 Anzahl_der_Kinder = Convert.ToDouble(Console.ReadLine());
+Console.Clear();
+
+
 if (Anzahl_der_Kinder > 0)
 {
     while (Anzahl_der_Kinder > 0)
     {
         ++B;
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
         Console.WriteLine($"Geben sie das alter des {B}. kindes an");
         --B;
         KinderAlter[B] = Convert.ToDouble(Console.ReadLine());
         --Anzahl_der_Kinder;
+        Console.Clear();
         if (KinderAlter[B] == 0)
         {
             Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
@@ -142,9 +202,100 @@ if (Anzahl_der_Kinder > 0)
     }
 }
 
-Console.WriteLine(ERGEB_NIS);
+/* RECHNUNG
 ERGEB_NIS = ERGEB_NIS + ERGEB_NIS * 19 / 100;
 double Elternpreis = anzahl_der_personen * Zimmerpreis * Aufenthaltsdauer;
 Elternpreis = Elternpreis + Elternpreis * 19 / 100;
 Endpreis = Elternpreis + ERGEB_NIS;
-Console.WriteLine($"Der preis beträgt: {Endpreis,10:C2}");
+Endpreis = Endpreis * saison;
+Endpreis = Endpreis * Kundenrabatt;
+*/
+
+//Load
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
+Console.WriteLine($"Berechnen eines Angebots.");
+Console.WriteLine($"Rechnung (kinder) : {ERGEB_NIS} + {ERGEB_NIS} * 19 / 100;");
+Console.WriteLine();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+ERGEB_NIS = ERGEB_NIS + ERGEB_NIS * 19 / 100;
+Thread.Sleep(1000);
+Console.Clear();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
+Console.WriteLine($"Berechnen eines Angebots..");
+Console.WriteLine($"Rechnung (Erwachsene) : {anzahl_der_personen} + {Zimmerpreis} * {Aufenthaltsdauer}");
+Console.WriteLine();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+double Elternpreis = anzahl_der_personen * Zimmerpreis * Aufenthaltsdauer;
+Thread.Sleep(1000);
+Console.Clear();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
+Console.WriteLine($"Berechnen eines Angebots...");
+Console.WriteLine($"Rechnung (Erwachsene) : {Elternpreis} + {Elternpreis} * 19 / 100;");
+Console.WriteLine();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Elternpreis = Elternpreis + Elternpreis * 19 / 100;
+Thread.Sleep(1000);
+Console.Clear();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
+Console.WriteLine($"Berechnen eines Angebots.");
+Console.WriteLine($"Rechnung (Endsumme) : {Elternpreis} + {ERGEB_NIS}");
+Console.WriteLine();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Endpreis = Elternpreis + ERGEB_NIS;
+Thread.Sleep(1000);
+Console.Clear();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
+Console.WriteLine($"Berechnen eines Angebots..");
+Console.WriteLine($"Rechnung (Rabatte) : {Elternpreis} * {saison}");
+Console.WriteLine();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Endpreis = Endpreis * saison;
+Thread.Sleep(1000);
+Console.Clear();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
+Console.WriteLine($"Berechnen eines Angebots...");
+Console.WriteLine($"Rechnung (Rabatte) : {Elternpreis} * {Kundenrabatt}");
+Console.WriteLine();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Endpreis = Endpreis * Kundenrabatt;
+Thread.Sleep(1000);
+Console.Clear();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
+Console.WriteLine();
+Console.WriteLine($"Endsumme mit rabatten: {Endpreis,10:C2}");
+Console.WriteLine();
+Console.WriteLine(Hotel_Rechner1);
+Console.WriteLine(Hotel_Rechner2);
+Console.WriteLine(Hotel_Rechner3);
