@@ -1,204 +1,414 @@
-﻿double Aufenthaltsdauer;
-double anzahl_der_personen;
-double saison;
-double Zimmerkategorie;
-double Kundenkategorie;
-double Anzahl_der_Kinder;
-double Alter_Der_Kinder;
-double[] Kinder = new double[10] {0,0,0,0,0,0,0,0,0,0};
-double[] KinderAlter = new double[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+﻿double Aufenthaltsdauer = 0;
+double anzahl_der_personen = 0;
+double saison = 1;
+double Zimmerkategorie = 0;
+double Kundenkategorie = 0;
+int Anzahl_der_Kinder = 0;
 double Kinderpreis = 0;
 int B = 0;
 double Zimmerpreis = 0;
 double Kundenrabatt = 0;
 double Endpreis = 0;
-double Endpreis_Kinder = 0;
 double ERGEB_NIS = 0;
 Console.OutputEncoding = System.Text.Encoding.Unicode;
 string Hotel_Rechner1 = "============================================================", Hotel_Rechner2 = "                    Hotel rechner", Hotel_Rechner3 = "============================================================";
 
 // 1
-Console.WriteLine(Hotel_Rechner1);
-Console.WriteLine(Hotel_Rechner2);
-Console.WriteLine(Hotel_Rechner3);
-Console.WriteLine();
-Console.WriteLine("Geben sie die Aufenthaltsdauer an (in tage):");
-Aufenthaltsdauer = Convert.ToDouble(Console.ReadLine());
-Console.Clear();
-
-// 2
-Console.WriteLine(Hotel_Rechner1);
-Console.WriteLine(Hotel_Rechner2);
-Console.WriteLine(Hotel_Rechner3);
-Console.WriteLine();
-Console.WriteLine("Geben sie die Anzahl der personen an:");
-anzahl_der_personen = Convert.ToDouble(Console.ReadLine());
-Console.Clear();
-
-//3
-Console.WriteLine(Hotel_Rechner1);
-Console.WriteLine(Hotel_Rechner2);
-Console.WriteLine(Hotel_Rechner3);
-Console.WriteLine();
-Console.WriteLine("Geben sie die saison an:");
-Console.WriteLine("Frühling        = 1");
-Console.WriteLine("Sommer   (+15%) = 2");
-Console.WriteLine("Herbst          = 3");
-Console.WriteLine("Winter   (-15%) = 4)");
-saison = Convert.ToDouble(Console.ReadLine());
-Console.Clear();
-switch (saison)
+bool Erste_Abfrage = true;
+while (Erste_Abfrage == true)
 {
-    case 1:
-        saison = 1;
-        break;
-    case 2:
-        saison = 1.15;
-        break;
-    case 3:
-        saison = 1;
-        break;
-    case 4:
-        saison = 0.85;
-        break;
-}
-
-// 4
-Console.WriteLine(Hotel_Rechner1);
-Console.WriteLine(Hotel_Rechner2);
-Console.WriteLine(Hotel_Rechner3);
-Console.WriteLine();
-Console.WriteLine("Geben sie die Zimmerkategorie an:");
-Console.WriteLine("Standard (70€ pro Nacht) = 1");
-Console.WriteLine("Komfort (100€ pro Nacht) = 2");
-Console.WriteLine("Suit    (250€ pro Nacht) = 3");
-Zimmerkategorie = Convert.ToDouble(Console.ReadLine());
-Console.Clear();
-switch (Zimmerkategorie)
-{
-    case 1:
-        Zimmerpreis = 70;
-        break;
-    case 2:
-        Zimmerpreis = 100;
-        break;
-    case 3:
-        Zimmerpreis = 250;
-        break;
-}
-
-// 5
-Console.WriteLine(Hotel_Rechner1);
-Console.WriteLine(Hotel_Rechner2);
-Console.WriteLine(Hotel_Rechner3);
-Console.WriteLine("Geben sie die Kundenkategorie an:");
-Console.WriteLine("Stammkunde   (20%) = 1");
-Console.WriteLine("Firmenkunde  (15%) = 2");
-Console.WriteLine("Reisebüro          = 3");
-Kundenkategorie = Convert.ToDouble(Console.ReadLine());
-Console.Clear();
-switch (Kundenkategorie)
-{
-    case 1:
-        Kundenrabatt = 0.8;
-        break;
-    case 2:
-        Kundenrabatt = 0.85;
-        break;
-    case 3:
-        Kundenrabatt = 1;
-        break;
-}
-
-// 6
-Console.WriteLine(Hotel_Rechner1);
-Console.WriteLine(Hotel_Rechner2);
-Console.WriteLine(Hotel_Rechner3);
-Console.WriteLine("Geben sie die anzahl der Kinder an:");
-Anzahl_der_Kinder = Convert.ToDouble(Console.ReadLine());
-Console.Clear();
-
-
-if (Anzahl_der_Kinder > 0)
-{
-    while (Anzahl_der_Kinder > 0)
+    try
     {
-        ++B;
         Console.WriteLine(Hotel_Rechner1);
         Console.WriteLine(Hotel_Rechner2);
         Console.WriteLine(Hotel_Rechner3);
         Console.WriteLine();
-        Console.WriteLine($"Geben sie das alter des {B}. kindes an");
-        --B;
-        KinderAlter[B] = Convert.ToDouble(Console.ReadLine());
-        --Anzahl_der_Kinder;
+        Console.WriteLine("Geben sie die Aufenthaltsdauer an (in tage):");
+        Aufenthaltsdauer = Convert.ToDouble(Console.ReadLine());
+        Erste_Abfrage = false;
         Console.Clear();
-        if (KinderAlter[B] == 0)
+    }
+    catch (Exception)
+    {
+        
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Falsche Eingabe bitte geben sie eine gültige zahl an.");
+        Console.WriteLine("App wird neu gestartet.");
+        Console.WriteLine();
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Erste_Abfrage = true;
+        Console.Clear();
+    }
+}
+
+// 2
+bool Zweite_Abfrage = true;
+while (Zweite_Abfrage == true)
+{
+    try
+    {
+        Zweite_Abfrage = false;
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Geben sie die Anzahl der personen an:");
+        anzahl_der_personen = Convert.ToDouble(Console.ReadLine());
+        Console.Clear();
+    }
+    catch (Exception)
+    {
+
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Falsche Eingabe bitte geben sie eine gültige zahl an.");
+        Console.WriteLine("App wird neu gestartet.");
+        Console.WriteLine();
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Zweite_Abfrage = true;
+        Console.Clear();
+    }
+}
+
+bool Dritte_Abfrage = true;
+while (Dritte_Abfrage == true)
+{   
+    try
+    {
+        Dritte_Abfrage = false;
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Geben sie die saison an:");
+        Console.WriteLine("Frühling (+0 %) = 1");
+        Console.WriteLine("Sommer   (+15%) = 2");
+        Console.WriteLine("Herbst   (+0 %) = 3");
+        Console.WriteLine("Winter   (-15%) = 4");
+        saison = Convert.ToDouble(Console.ReadLine());
+        Console.Clear();
+        switch (saison)
         {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
-            ERGEB_NIS += Kinderpreis;
+            case 1:
+                saison = 1;
+                Dritte_Abfrage = false;
+                break;
+            case 2:
+                saison = 1.15;
+                Dritte_Abfrage = false;
+                break;
+            case 3:
+                saison = 1;
+                Dritte_Abfrage = false;
+                break;
+            case 4:
+                saison = 0.85;
+                Dritte_Abfrage = false;
+                break;
+            case > 4:
+                Console.WriteLine(Hotel_Rechner1);
+                Console.WriteLine(Hotel_Rechner2);
+                Console.WriteLine(Hotel_Rechner3);
+                Console.WriteLine();
+                Console.WriteLine("Falsche Eingabe bitte geben sie eine zahl von 1 bis 4 an.");
+                Console.WriteLine("App wird neu gestartet.");
+                Console.WriteLine();
+                Console.WriteLine(Hotel_Rechner1);
+                Console.WriteLine(Hotel_Rechner2);
+                Console.WriteLine(Hotel_Rechner3);
+                Thread.Sleep(7000);
+                Console.Clear();
+                break;
         }
-        else if (KinderAlter[B] == 1)
+    }
+    catch (Exception)
+    {
+
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Falsche Eingabe bitte geben sie eine gültige zahl an.");
+        Console.WriteLine("App wird neu gestartet.");
+        Console.WriteLine();
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Erste_Abfrage = true;
+        Console.Clear();
+    }
+}
+
+bool Vierte_Abfrage = true;
+while (Vierte_Abfrage == true)
+{
+    try
+    {
+        Vierte_Abfrage = false;
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Geben sie die Zimmerkategorie an:");
+        Console.WriteLine("Standard (70€ pro Nacht) = 1");
+        Console.WriteLine("Komfort (100€ pro Nacht) = 2");
+        Console.WriteLine("Suit    (250€ pro Nacht) = 3");
+        Zimmerkategorie = Convert.ToDouble(Console.ReadLine());
+        Console.Clear();
+        switch (Zimmerkategorie)
         {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
-            ERGEB_NIS += Kinderpreis;
+            case 1:
+                Zimmerpreis = 70;
+                Vierte_Abfrage = false;
+                break;
+            case 2:
+                Zimmerpreis = 100;
+                Vierte_Abfrage = false;
+                break;
+            case 3:
+                Zimmerpreis = 250;
+                Vierte_Abfrage = false;
+                break;
+            case > 3:
+                Console.WriteLine(Hotel_Rechner1);
+                Console.WriteLine(Hotel_Rechner2);
+                Console.WriteLine(Hotel_Rechner3);
+                Console.WriteLine();
+                Console.WriteLine("Falsche Eingabe bitte geben sie eine zahl von 1 bis 3 an.");
+                Console.WriteLine("App wird neu gestartet.");
+                Console.WriteLine();
+                Console.WriteLine(Hotel_Rechner1);
+                Console.WriteLine(Hotel_Rechner2);
+                Console.WriteLine(Hotel_Rechner3);
+                Thread.Sleep(7000);
+                Console.Clear();
+                break;
         }
-        else if (KinderAlter[B] == 2)
+    }
+    catch (Exception)
+    {
+
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Falsche Eingabe bitte geben sie eine gültige zahl an.");
+        Console.WriteLine("App wird neu gestartet.");
+        Console.WriteLine();
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Vierte_Abfrage = true;
+        Console.Clear();
+    }
+}
+
+
+// 5
+bool Fünfte_Abfrage = true;
+while (Fünfte_Abfrage == true)
+{
+    try
+    {
+        Fünfte_Abfrage = false;
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine("Geben sie die Kundenkategorie an:");
+        Console.WriteLine("Stammkunde   (20%) = 1");
+        Console.WriteLine("Firmenkunde  (15%) = 2");
+        Console.WriteLine("Reisebüro    (0%)  = 3");
+        Kundenkategorie = Convert.ToDouble(Console.ReadLine());
+        Console.Clear();
+        switch (Kundenkategorie)
         {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
-            ERGEB_NIS += Kinderpreis;
+            case 1:
+                Kundenrabatt = 0.8;
+                Fünfte_Abfrage = false;
+                break;
+            case 2:
+                Kundenrabatt = 0.85;
+                Fünfte_Abfrage = false;
+                break;
+            case 3:
+                Kundenrabatt = 1;
+                Fünfte_Abfrage = false;
+                break;
+            case > 3:
+                Console.WriteLine(Hotel_Rechner1);
+                Console.WriteLine(Hotel_Rechner2);
+                Console.WriteLine(Hotel_Rechner3);
+                Console.WriteLine();
+                Console.WriteLine("Falsche Eingabe bitte geben sie eine zahl von 1 bis 3 an.");
+                Console.WriteLine("App wird neu gestartet.");
+                Console.WriteLine();
+                Console.WriteLine(Hotel_Rechner1);
+                Console.WriteLine(Hotel_Rechner2);
+                Console.WriteLine(Hotel_Rechner3);
+                Thread.Sleep(7000);
+                Console.Clear();
+                break;
         }
-        else if (KinderAlter[B] == 3)
+    }
+    catch (Exception)
+    {
+
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Falsche Eingabe bitte geben sie eine gültige zahl an.");
+        Console.WriteLine("App wird neu gestartet.");
+        Console.WriteLine();
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Fünfte_Abfrage = true;
+        Console.Clear();
+    }
+}
+
+bool Test_Abfrage = true;
+while (Test_Abfrage == true)
+{
+    try
+    {
+        Test_Abfrage = false;
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine("Geben sie die anzahl der Kinder an:");
+        Anzahl_der_Kinder = Convert.ToInt16(Console.ReadLine());
+        Console.Clear();
+    }
+    catch (Exception)
+    {
+
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Console.WriteLine();
+        Console.WriteLine("Falsche Eingabe bitte geben sie eine gültige zahl an.");
+        Console.WriteLine("App wird neu gestartet.");
+        Console.WriteLine();
+        Console.WriteLine(Hotel_Rechner1);
+        Console.WriteLine(Hotel_Rechner2);
+        Console.WriteLine(Hotel_Rechner3);
+        Test_Abfrage = true;
+        Console.Clear();
+    }
+}
+double[] KinderAlter = new double[Anzahl_der_Kinder];
+
+bool Test1 = true;
+while (Test1 == true)
+{
+    while (Anzahl_der_Kinder > 0)
+    {
+        try
         {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
-            ERGEB_NIS += Kinderpreis;
+            Test1 = false;
+            ++B;
+            Console.WriteLine(Hotel_Rechner1);
+            Console.WriteLine(Hotel_Rechner2);
+            Console.WriteLine(Hotel_Rechner3);
+            Console.WriteLine();
+            Console.WriteLine($"Geben sie das alter des {B}. kindes an");
+            --B;
+            KinderAlter[B] = Convert.ToDouble(Console.ReadLine());
+            --Anzahl_der_Kinder;
+            Console.Clear();
+            if (KinderAlter[B] == 0)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 1)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 2)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 3)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 4)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 5)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 6)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 7)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 8)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 9)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 10)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] == 11)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
+                ERGEB_NIS += Kinderpreis;
+            }
+            else if (KinderAlter[B] > 11)
+            {
+                Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.3;
+                ERGEB_NIS += Kinderpreis;
+            }
+            ++B;
         }
-        else if (KinderAlter[B] == 4)
+        catch (Exception)
         {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
-            ERGEB_NIS += Kinderpreis;
+            Console.WriteLine(Hotel_Rechner1);
+            Console.WriteLine(Hotel_Rechner2);
+            Console.WriteLine(Hotel_Rechner3);
+            Console.WriteLine();
+            Console.WriteLine("Falsche Eingabe bitte geben sie eine gültige zahl an.");
+            Console.WriteLine("App wird neu gestartet.");
+            Console.WriteLine();
+            Console.WriteLine(Hotel_Rechner1);
+            Console.WriteLine(Hotel_Rechner2);
+            Console.WriteLine(Hotel_Rechner3);
+            Test1 = true;
+            Console.Clear();
         }
-        else if (KinderAlter[B] == 5)
-        {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
-            ERGEB_NIS += Kinderpreis;
-        }
-        else if (KinderAlter[B] == 6)
-        {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0;
-            ERGEB_NIS += Kinderpreis;
-        }
-        else if (KinderAlter[B] == 7)
-        {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer)*0.7;
-            ERGEB_NIS += Kinderpreis;
-        }
-        else if (KinderAlter[B] == 8)
-        {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
-            ERGEB_NIS += Kinderpreis;
-        }
-        else if (KinderAlter[B] == 9)
-        {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
-            ERGEB_NIS += Kinderpreis;
-        }
-        else if (KinderAlter[B] == 10)
-        {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
-            ERGEB_NIS += Kinderpreis;
-        }
-        else if (KinderAlter[B] == 11)
-        {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.7;
-            ERGEB_NIS += Kinderpreis;
-        }
-        else if (KinderAlter[B] > 11)
-        {
-            Kinderpreis += (1 * Zimmerpreis * Aufenthaltsdauer) * 0.3;
-            ERGEB_NIS += Kinderpreis;
-        }
-        ++B;
     }
 }
 
