@@ -1,9 +1,10 @@
-﻿double Aufenthaltsdauer = 0;
-double anzahl_der_personen = 0;
-double saison = 1;
-double Zimmerkategorie = 0;
-double Kundenkategorie = 0;
-int Anzahl_der_Kinder = 0;
+﻿uint Aufenthaltsdauer = 0;
+uint anzahl_der_personen = 0;
+uint saison = 1;
+double saisonpreis = 1;
+uint Zimmerkategorie = 0;
+uint Kundenkategorie = 0;
+uint Anzahl_der_Kinder = 0;
 double Kinderpreis = 0;
 int B = 0;
 double Zimmerpreis = 0;
@@ -24,7 +25,7 @@ while (Erste_Abfrage == true)
         Console.WriteLine(Hotel_Rechner3);
         Console.WriteLine();
         Console.WriteLine("Geben sie die Aufenthaltsdauer an (in tage):");
-        Aufenthaltsdauer = Convert.ToDouble(Console.ReadLine());
+        Aufenthaltsdauer = Convert.ToUInt16(Console.ReadLine());
         Erste_Abfrage = false;
         Console.Clear();
     }
@@ -58,7 +59,7 @@ while (Zweite_Abfrage == true)
         Console.WriteLine(Hotel_Rechner3);
         Console.WriteLine();
         Console.WriteLine("Geben sie die Anzahl der personen an:");
-        anzahl_der_personen = Convert.ToDouble(Console.ReadLine());
+        anzahl_der_personen = Convert.ToUInt16(Console.ReadLine());
         Console.Clear();
     }
     catch (Exception)
@@ -84,7 +85,6 @@ while (Dritte_Abfrage == true)
 {   
     try
     {
-        Dritte_Abfrage = false;
         Console.WriteLine(Hotel_Rechner1);
         Console.WriteLine(Hotel_Rechner2);
         Console.WriteLine(Hotel_Rechner3);
@@ -94,24 +94,24 @@ while (Dritte_Abfrage == true)
         Console.WriteLine("Sommer   (+15%) = 2");
         Console.WriteLine("Herbst   (+0 %) = 3");
         Console.WriteLine("Winter   (-15%) = 4");
-        saison = Convert.ToDouble(Console.ReadLine());
+        saison = Convert.ToUInt16(Console.ReadLine());
         Console.Clear();
         switch (saison)
         {
             case 1:
-                saison = 1;
+                saisonpreis = 1;
                 Dritte_Abfrage = false;
                 break;
             case 2:
-                saison = 1.15;
+                saisonpreis = 1.15;
                 Dritte_Abfrage = false;
                 break;
             case 3:
-                saison = 1;
+                saisonpreis = 1;
                 Dritte_Abfrage = false;
                 break;
             case 4:
-                saison = 0.85;
+                saisonpreis = 0.85;
                 Dritte_Abfrage = false;
                 break;
             case > 4:
@@ -153,7 +153,6 @@ while (Vierte_Abfrage == true)
 {
     try
     {
-        Vierte_Abfrage = false;
         Console.WriteLine(Hotel_Rechner1);
         Console.WriteLine(Hotel_Rechner2);
         Console.WriteLine(Hotel_Rechner3);
@@ -162,7 +161,7 @@ while (Vierte_Abfrage == true)
         Console.WriteLine("Standard (70€ pro Nacht) = 1");
         Console.WriteLine("Komfort (100€ pro Nacht) = 2");
         Console.WriteLine("Suit    (250€ pro Nacht) = 3");
-        Zimmerkategorie = Convert.ToDouble(Console.ReadLine());
+        Zimmerkategorie = Convert.ToUInt16(Console.ReadLine());
         Console.Clear();
         switch (Zimmerkategorie)
         {
@@ -219,7 +218,6 @@ while (Fünfte_Abfrage == true)
 {
     try
     {
-        Fünfte_Abfrage = false;
         Console.WriteLine(Hotel_Rechner1);
         Console.WriteLine(Hotel_Rechner2);
         Console.WriteLine(Hotel_Rechner3);
@@ -227,7 +225,7 @@ while (Fünfte_Abfrage == true)
         Console.WriteLine("Stammkunde   (20%) = 1");
         Console.WriteLine("Firmenkunde  (15%) = 2");
         Console.WriteLine("Reisebüro    (0%)  = 3");
-        Kundenkategorie = Convert.ToDouble(Console.ReadLine());
+        Kundenkategorie = Convert.ToUInt16(Console.ReadLine());
         Console.Clear();
         switch (Kundenkategorie)
         {
@@ -287,7 +285,7 @@ while (Test_Abfrage == true)
         Console.WriteLine(Hotel_Rechner2);
         Console.WriteLine(Hotel_Rechner3);
         Console.WriteLine("Geben sie die anzahl der Kinder an:");
-        Anzahl_der_Kinder = Convert.ToInt16(Console.ReadLine());
+        Anzahl_der_Kinder = Convert.ToUInt16(Console.ReadLine());
         Console.Clear();
     }
     catch (Exception)
@@ -307,7 +305,7 @@ while (Test_Abfrage == true)
         Console.Clear();
     }
 }
-double[] KinderAlter = new double[Anzahl_der_Kinder];
+uint[] KinderAlter = new uint[Anzahl_der_Kinder];
 
 bool Test1 = true;
 while (Test1 == true)
@@ -324,7 +322,7 @@ while (Test1 == true)
             Console.WriteLine();
             Console.WriteLine($"Geben sie das alter des {B}. kindes an");
             --B;
-            KinderAlter[B] = Convert.ToDouble(Console.ReadLine());
+            KinderAlter[B] = Convert.ToUInt16(Console.ReadLine());
             --Anzahl_der_Kinder;
             Console.Clear();
             if (KinderAlter[B] == 0)
@@ -479,7 +477,7 @@ Console.WriteLine(Hotel_Rechner2);
 Console.WriteLine(Hotel_Rechner3);
 Console.WriteLine();
 Console.WriteLine($"Berechnen eines Angebots..");
-Console.WriteLine($"Rechnung (Rabatte) : {Elternpreis} * {saison}");
+Console.WriteLine($"Rechnung (Rabatte) : {Endpreis} * {saisonpreis}");
 Console.WriteLine();
 Console.WriteLine(Hotel_Rechner1);
 Console.WriteLine(Hotel_Rechner2);
@@ -492,7 +490,7 @@ Console.WriteLine(Hotel_Rechner2);
 Console.WriteLine(Hotel_Rechner3);
 Console.WriteLine();
 Console.WriteLine($"Berechnen eines Angebots...");
-Console.WriteLine($"Rechnung (Rabatte) : {Elternpreis} * {Kundenrabatt}");
+Console.WriteLine($"Rechnung (Rabatte) : {Endpreis} * {Kundenrabatt}");
 Console.WriteLine();
 Console.WriteLine(Hotel_Rechner1);
 Console.WriteLine(Hotel_Rechner2);
