@@ -308,6 +308,10 @@ while (Test_Abfrage == true)
 uint[] KinderAlter = new uint[Anzahl_der_Kinder];
 
 bool Test1 = true;
+if (Anzahl_der_Kinder == 0)
+{
+    Test1 = false;
+}
 while (Test1 == true)
 {
     while (Anzahl_der_Kinder > 0)
