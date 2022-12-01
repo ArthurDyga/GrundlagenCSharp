@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6Sinus", "6Sinus\6Sinus.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7WochenTage", "7WochenTage\7WochenTage.csproj", "{0822DDD4-92F9-4FB0-A595-B18F1DCCA99F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8Array", "8Array\8Array.csproj", "{367A4505-1F96-47EE-B78F-A7828270BB51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8Array", "8Array\8Array.csproj", "{367A4505-1F96-47EE-B78F-A7828270BB51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9HotelAuftrag", "9HotelAuftrag\9HotelAuftrag.csproj", "{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{367A4505-1F96-47EE-B78F-A7828270BB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{367A4505-1F96-47EE-B78F-A7828270BB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{367A4505-1F96-47EE-B78F-A7828270BB51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
