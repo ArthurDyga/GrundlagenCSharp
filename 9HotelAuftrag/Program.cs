@@ -300,7 +300,6 @@ while (Test_Abfrage == true)
         Console.WriteLine();
         Console.WriteLine(Hotel_Rechner1);
         Console.WriteLine(Hotel_Rechner2);
-        Console.WriteLine(Hotel_Rechner3);
         Test_Abfrage = true;
         Console.Clear();
     }

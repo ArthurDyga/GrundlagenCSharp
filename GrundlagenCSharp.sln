@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7WochenTage", "7WochenTage\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8Array", "8Array\8Array.csproj", "{367A4505-1F96-47EE-B78F-A7828270BB51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9HotelAuftrag", "9HotelAuftrag\9HotelAuftrag.csproj", "{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9HotelAuftrag", "9HotelAuftrag\9HotelAuftrag.csproj", "{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "91DieterDieter", "91DieterDieter\91DieterDieter.csproj", "{1FBCE2D3-1B78-44C7-AE74-8AE5D74F7840}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FBB4308-0652-4BEC-8FCE-51A2A3BE11F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FBCE2D3-1B78-44C7-AE74-8AE5D74F7840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FBCE2D3-1B78-44C7-AE74-8AE5D74F7840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FBCE2D3-1B78-44C7-AE74-8AE5D74F7840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FBCE2D3-1B78-44C7-AE74-8AE5D74F7840}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
